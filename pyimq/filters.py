@@ -276,7 +276,7 @@ class FrequencyQuality(Filter):
         sum = numpy.zeros(self.power.shape[0])
         for i in range(len(self.power.shape)):
             sum += numpy.sum(self.power, axis=i)
-        zero = floor(float(sum.size)/2)
+        zero = int(floor(float(sum.size)/2))
         sum[zero+1:] = sum[zero+1:]+sum[:zero-1][::-1]
         sum = sum[zero:]
         dx = self.data.get_spacing()[0]
