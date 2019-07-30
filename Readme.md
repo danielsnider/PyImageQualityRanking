@@ -1,6 +1,8 @@
 # PyImageQualityRanking 
 
-Please also see the original author's wiki: https://bitbucket.org/sakoho81/pyimagequalityranking/wiki/Home
+*Update 2019 Sami: Please take a look at the [Microscope Image Processing Library (MIPLIB)](https://github.com/sakoho81/miplib). I am not going to update the pyimq package anymore. It should however continue working just fine.*
+
+Please also see the original author's github: https://github.com/sakoho81/pyimagequalityranking
 
 ## An Image quality ranking tool for Microscopy
 
@@ -20,7 +22,7 @@ Our aim was to develop a simple tool that would not involve any complex mathemat
 ### How do I install it?
 *PyImageQualityRanking* was written for Python 2.7. utilizing standard SciPy scientific libraries. The software should thus work on all the common operating systems. *PyImageQualityRanking* is distributed as a standard python package and it can be installed using the **setup.py** script. However, you should make sure that you have installed the [SciPy libraries](http://www.scipy.org/install.html) in the computer's Python environment. Typically, if using Anaconda distribution etc. these libraries should have been installed by default.
 
-Please refer to the Wiki page for usage examples.
+Please refer to the [Wiki](https://github.com/sakoho81/pyimagequalityranking) page for usage examples.
 
 ### Contribution guidelines ###
 
