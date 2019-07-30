@@ -138,7 +138,8 @@ class LocalImageQuality(Filter):
                 assert self.kernel_size[i] < self.dimensions[i]
         else:
             self.kernel_size = sizes
-            assert self.kernel_size < self.dimensions, \
+            assert (self.kernel_size[0] < self.dimensions[0] and \
+            self.kernel_size[1] < self.dimensions[1]), \
                 "Kernel can not be larger than image"
 
     def run_mean_smoothing(self, return_result=False):

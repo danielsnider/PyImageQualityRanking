@@ -17,6 +17,7 @@ from PIL import Image
 from PIL.TiffImagePlugin import X_RESOLUTION, Y_RESOLUTION
 from matplotlib import pyplot as plt
 from math import log10, ceil, floor
+from pyimq import utils
 
 
 def get_options(parser):
@@ -75,13 +76,15 @@ class MyImage(object):
         """
         assert os.path.isfile(path)
         assert path.endswith(('.tif', '.tiff'))
-
         image = Image.open(path)
+
+        image.tag[X_RESOLUTION]
+        image.tag[Y_RESOLUTION]
 
         xresolution = image.tag.tags[X_RESOLUTION][0][0]
         yresolution = image.tag.tags[Y_RESOLUTION][0][0]
 
-        #data = utils.rescale_to_min_max(numpy.array(image), 0, 255)
+        data = utils.rescale_to_min_max(numpy.array(image), 0, 255)
 
         if data.shape[0] == 1:
             data = data[0]
